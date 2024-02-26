@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - app_sqlazure</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/app_sqlazure.styles.css" asp-append-version="true" />
+</head>
+<body class="bg-dark">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark box-shadow mb-3" style="border-bottom: 10px solid #303030;">
+            <div class="container w-100 d-flex justify-content-between">
+                <a class="navbar-brand text-white" asp-area="" asp-page="/Index"><span class="fonte-fiap">Challenge</span> Azure Fiap</a>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1 justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: #ed145b;" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: #ed145b;" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="w-100 d-flex justify-content-center align-items-center border-top footer text-muted bottom-0">
+        <div class="container d-flex justify-content-center align-items-center p-3">
+            &copy; 2023 - <a class="navbar-brand text-white ms-2" asp-area="" asp-page="/Index"><span class="fonte-fiap" style="font-size: 25px;">Challenge</span> Azure Fiap</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
